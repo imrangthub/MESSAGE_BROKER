@@ -16,3 +16,7 @@ FanoutExchange:
 
 
         http://localhost:8083/rabbitmq/fanout/producer?exchangeName=fanout-exchange&messageData=HelloWorldMsg
+        
+        
+        
+        http://localhost:8084/rabbitmq/producer?empName=emp1&empId=emp001&salary=500000
