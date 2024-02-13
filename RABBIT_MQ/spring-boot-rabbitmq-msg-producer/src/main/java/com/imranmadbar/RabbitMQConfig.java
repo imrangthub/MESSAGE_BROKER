@@ -1,4 +1,4 @@
-package com.imranmadbar.config;
+package com.imranmadbar;
 
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.Binding;
@@ -46,10 +46,10 @@ public class RabbitMQConfig {
 	}
 
 	
-	@Bean
-	public AmqpTemplate rabbitTemplate(ConnectionFactory connectionFactory) {
-		final RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
-		rabbitTemplate.setMessageConverter(jsonMessageConverter());
-		return rabbitTemplate;
-	}
+//	@Bean
+//	public AmqpTemplate rabbitTemplate(ConnectionFactory connectionFactory) {
+//		final RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
+//		rabbitTemplate.setMessageConverter(jsonMessageConverter());
+//		return rabbitTemplate;
+//	}
 }
