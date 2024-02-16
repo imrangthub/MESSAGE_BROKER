@@ -13,7 +13,7 @@ public class RabbitMQWebController {
 	@Autowired
 	private RabbitMQSender rabbitMQSender;
 
-	@GetMapping(value = "/send-employee")
+	@GetMapping(value = "/sent-emp")
 	public String producer(@RequestParam("empName") String empName, @RequestParam("empId") String empId) {
 
 		Employee emp = new Employee();
