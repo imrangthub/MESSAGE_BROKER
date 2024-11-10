@@ -40,3 +40,32 @@ FanoutExchange:
         
         
         http://localhost:8084/rabbitmq/producer?empName=emp1&empId=emp001&salary=500000
+
+
+Use command line:
+
+        $sudo apt install rabbitmq-server
+
+
+Create exchange: 
+                
+        $rabbitmqadmin declare exchange name=imm-app-exc1 type=direct
+Create queue: 
+
+        $rabbitmqadmin declare queue name=imm-app-que1 durable=true
+Bind queue to exchange: 
+
+        $rabbitmqadmin declare binding source=imm-app-exc1 destination=imm-app-que1 routing_key=imm-app-rut1
+Send message: 
+        
+        $rabbitmqadmin publish routing_key=imm-app-rut1 exchange=imm-app-exc1 payload="Hello RabbitMQ by imran"
+Consume message: 
+
+        $rabbitmqadmin get queue=imm-app-que1 count=1
+
+
+
+
+        
+        
+        
